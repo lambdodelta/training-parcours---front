@@ -16,10 +16,10 @@
             </thead>
             <tbody>
             <div class="result">
-                <tr *ngFor="let joke of movies$ | filter:filterTerm">
-                    <td>{{joke.title}}</td>
-                    <td>{{joke.language}}</td>
-                    <td>{{joke.status}}</td>
+                <tr *ngFor="let show of movies$ | filter:filterTerm">
+                    <td>{{show.title}}</td>
+                    <td>{{show.language}}</td>
+                    <td>{{show.status}}</td>
                 </tr>
             </div>
             </tbody>
