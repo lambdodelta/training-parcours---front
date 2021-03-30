@@ -1,8 +1,3 @@
-p {
-    color: tomato;
-    margin-left: 5em !important;
-}
-
 .main {
     border: 1px solid black;
     margin-left: 3em !important;
@@ -13,7 +8,15 @@ p {
 .filter {
     display: inline-flex;
 }
-
+thead {
+    background-color: #1976d2;
+    color: white;
+}
+table {
+    margin: 1em;
+    border-collapse: separate !important;
+    border-spacing: 0.2em !important;
+}
 
 button:nth-child(2) {
     margin-left: 2em;
