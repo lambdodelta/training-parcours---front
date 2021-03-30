@@ -1,0 +1,15 @@
+.background {
+    float: left;
+    background-color: #3d4952;
+    min-height: 100%;
+    height: 90vh;
+    color: whitesmoke;
+}
+h3 {
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px dotted gray;
+}
+.content {
+    margin: 1em !important;
+}

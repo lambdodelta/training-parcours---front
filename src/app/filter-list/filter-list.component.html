@@ -1,0 +1,28 @@
+<app-side-bar (data) = "filter_list($event)"></app-side-bar>
+<div class="main">
+    <div class="content">
+        <div class="filter">
+            <input type="text" class="form-control" placeholder="Filter par Nom" [(ngModel)]="filterTerm">
+            <button class="btn btn-danger">exporter Sélection</button>
+            <button class="btn btn-danger">exporter Tout</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th >Title</th>
+                    <th >Language</th>
+                    <th >Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            <div class="result">
+                <tr *ngFor="let joke of movies$ | filter:filterTerm">
+                    <td>{{joke.title}}</td>
+                    <td>{{joke.language}}</td>
+                    <td>{{joke.status}}</td>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+    </div>
+</div>

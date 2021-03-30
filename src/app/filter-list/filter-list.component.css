@@ -1,0 +1,30 @@
+p {
+    color: tomato;
+    margin-left: 5em !important;
+}
+
+.main {
+    border: 1px solid black;
+    margin-left: 3em !important;
+    display: flow-root;
+    border-radius: 0.2em;
+}
+
+.filter {
+    display: inline-flex;
+}
+
+
+button:nth-child(2) {
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+button {
+    background-color: gray !important;
+    border-style: none;
+}
+
+.content {
+    margin: 1em !important;
+}
