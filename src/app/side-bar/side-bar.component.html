@@ -1,23 +1,14 @@
 <div class="background">
     <div class="content">
         <h3>Filtre(s)</h3>
-        <div class="form-row align-items-center">
+        <div *ngFor="let hero of Hero" class="form-row align-items-center">
             <div class="col-auto my-1">
-              <label class="mr-sm-2" for="inlineFormCustomSelect">Méthode de sélection</label>
-              <select (change)="changing($event.target.value)" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <label class="mr-sm-2" for="inlineFormCustomSelect">{{ hero.name }}</label>
+              <select (change)="changing($event.target)" class="custom-select mr-sm-2" id={{hero.id}}>
                 <option selected>Tous</option>
                 <option value="popularity">Popularité</option>
                 <option value="alphabetical">Alphabétique</option>
                 <option value="followers">Follower</option>
-              </select>
-            </div>
-        </div>
-        <div class="form-row align-items-center">
-            <div class="col-auto my-1">
-              <label class="mr-sm-2" for="inlineFormCustomSelect">Période de sélection</label>
-              <select (change)="changing($event.target.value)" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                <option selected>Tous</option>
-                <option value="recent">Récent</option>
               </select>
             </div>
         </div>

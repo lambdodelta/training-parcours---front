@@ -19,18 +19,20 @@ export class FilterListComponent implements OnInit {
   ngOnInit(): void {
     this.apiservice.getAllMovie().subscribe(data => {
       data.shows.forEach ( result => {
-        console.log(result);
         this.movies$.push(result);
       })
     })
   }
 
-  filter_list(value : string): void {
+  selected(event: any ) : void {
+    event.currentTarget.style.backgroundColor = 'green';
+  }
+
+  filter_list(value : string[]): void {
     this.movies$ = [];
     console.log(value);
     this.apiservice.getShowByFilter(value).subscribe(data => {
       data.shows.forEach ( result => {
-        console.log(result);
         this.movies$.push(result);
       })
       })

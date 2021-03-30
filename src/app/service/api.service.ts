@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+
   constructor(private http: HttpClient) { }
 
   getAllMovie(): Observable<any> {
@@ -17,8 +18,8 @@ export class ApiService {
     })
   }
 
-  getShowByFilter(value: string): Observable<any> {
-    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=2&order=popularity', {
+  getShowByFilter(value: string[]): Observable<any> {
+    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=5&order=popularity', {
       headers: {
         'X-BetaSeries-Key' : '0c28af9c6ab6' ,
       }

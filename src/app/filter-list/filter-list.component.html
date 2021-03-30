@@ -3,8 +3,8 @@
     <div class="content">
         <div class="filter">
             <input type="text" class="form-control" placeholder="Filter par Nom" [(ngModel)]="filterTerm">
-            <button class="btn btn-danger">exporter Sélection</button>
-            <button class="btn btn-danger">exporter Tout</button>
+            <button class="btn btn-danger">Exporter Sélection</button>
+            <button class="btn btn-danger">Exporter Tout</button>
         </div>
         <table>
             <thead>
@@ -12,17 +12,18 @@
                     <td>Titre</td>
                     <td>Langue</td>
                     <td>Status</td>
+                    <td>Pays</td>
+                    <td>Année</td>
                 </tr>
             </thead>
             <tbody>
-            <div class="result">
-                <tr *ngFor="let show of movies$ | filter:filterTerm">
+                <tr *ngFor="let show of movies$ | filter:filterTerm" (click)="selected($event)">
                     <td>{{show.title}}</td>
                     <td>{{show.language}}</td>
                     <td>{{show.status}}</td>
                 </tr>
-            </div>
             </tbody>
         </table>
+        <div *ngIf="movies$"><p>nombre total de films : {{ movies$.length }}</p></div>
     </div>
 </div>

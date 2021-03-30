@@ -7,16 +7,33 @@ import { Component, OnInit, EventEmitter,  Output } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  @Output() public data = new EventEmitter<{value:string}>();
+  Hero = [
+    { id: 1, name: 'ordre' , nten: [
+      "date", "nom"
+    ] },
+    { id: 2, name: 'récent', nten: [
+      "date", "nom"
+    ] },
+    { id: 3, name: 'genre' , conten: [
+      "date", "nom"
+    ] }
+  ];
+
+  @Output() public data = new EventEmitter<{tmp:string[]}>();
   filter: string[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    for(var i = 0; i < this.Hero.length; i++) {
+      this.filter.push("");
+    }
   }
 
-  changing(value: string) : void {
-    this.data.emit({value});
+  changing(target: any) : void {
+    this.filter[0] = target.value;
+    let tmp = this.filter;
+    this.data.emit({tmp});
   }
 
 }
