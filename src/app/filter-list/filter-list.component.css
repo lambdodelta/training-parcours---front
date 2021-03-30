@@ -4,7 +4,6 @@ p {
     font-size: small;
 }
 .main {
-    border: 1px solid black;
     margin-left: 3em !important;
     display: flow-root;
     border-radius: 0.2em;

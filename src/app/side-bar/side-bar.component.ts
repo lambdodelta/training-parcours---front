@@ -31,7 +31,7 @@ export class SideBarComponent implements OnInit {
   }
 
   changing(target: any) : void {
-    this.filter[0] = target.value;
+    //this.filter[0] = target.value;
     let tmp = this.filter;
     this.data.emit({tmp});
   }

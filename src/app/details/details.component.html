@@ -1,11 +1,34 @@
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
+<div class="main">
+    <ul ngbNav #nav="ngbNav" class="nav-tabs">
     <li ngbNavItem>
-      <a ngbNavLink>First</a>
-      <ng-template ngbNavContent>First content</ng-template>
+      <a ngbNavLink>Etat Pédago</a>
+      <ng-template ngbNavContent>
+        <div class="first_block">
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Titre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  placeholder={{data}}>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Genre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  placeholder={{data}}>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  placeholder={{data}}>
+                </div>
+            </div>
+        </div>
+    </ng-template>
     </li>
     <li ngbNavItem>
-      <a ngbNavLink>Second</a>
-      <ng-template ngbNavContent>Second content</ng-template>
+      <a ngbNavLink>Historique</a>
+      <ng-template ngbNavContent><div><input class="form-control" type="text" placeholder={{data}} readonly></div></ng-template>
     </li>
   </ul>
   <div [ngbNavOutlet]="nav"></div>
+</div>
