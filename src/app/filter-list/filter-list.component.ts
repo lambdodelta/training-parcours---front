@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../service/api.service'
 import {Subscription} from 'rxjs'
 
@@ -9,6 +9,13 @@ import {Subscription} from 'rxjs'
 })
 export class FilterListComponent implements OnInit {
 
+  @Input('class')
+klass: string
+
+@Input()
+ngClass: string | string[] | Set<string> | { [klass: string]: any; }
+
+  select: any;
   listen: Subscription;
   index: Number;
   children_data: any;
@@ -29,8 +36,9 @@ export class FilterListComponent implements OnInit {
   }
 
   selected(event: any ) : void {
-    event.currentTarget.style.backgroundColor = 'green';
-    this.children_data = this.movies$[1];
+    console.log(this.movies$[event.currentTarget.id].id)
+    this.select = this.movies$[event.currentTarget.id].id
+    this.children_data = this.movies$[event.currentTarget.id];
   }
 
   filter_list(tmp : string[]): void {

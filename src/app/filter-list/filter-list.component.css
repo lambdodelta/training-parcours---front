@@ -3,6 +3,10 @@ p {
     color: #928F8F;
     font-size: small;
 }
+tr.select {
+    background-color: magenta;
+}
+
 .main {
     margin-left: 3em !important;
     display: flow-root;

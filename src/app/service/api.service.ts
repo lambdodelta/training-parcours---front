@@ -18,7 +18,6 @@ export class ApiService {
   }
 
   getShowByFilter(value: string): Observable<any> {
-    console.log(value);
     return this.http.get<any>('https://api.betaseries.com/shows/list?limit=5&order=' + value , {
       headers: {
         'X-BetaSeries-Key' : '0c28af9c6ab6' ,
