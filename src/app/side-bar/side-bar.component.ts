@@ -19,21 +19,21 @@ export class SideBarComponent implements OnInit {
     ] }
   ];
 
-  @Output() public data = new EventEmitter<{tmp:string[]}>();
-  filter: string[];
+  @Output() public data = new EventEmitter<any>();
+  filter_term: string[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     for(var i = 0; i < this.Hero.length; i++) {
-      this.filter.push("");
+      this.filter_term.push("");
     }
   }
 
   changing(target: any) : void {
-    //this.filter[0] = target.value;
-    let tmp = this.filter;
-    this.data.emit({tmp});
+    this.filter_term[target.id] = target.value;
+    let tmp = this.filter_term;
+    this.data.emit(tmp);
   }
 
 }

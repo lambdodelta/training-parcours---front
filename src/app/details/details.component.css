@@ -4,6 +4,9 @@ ul.nav-tabs {
 
 .first_block {
     margin: 1em;
+    border: 1px solid gray !important;
+    border-radius: 1em;
+    padding: 2em;
 }
 
 .main {

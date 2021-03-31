@@ -10,6 +10,7 @@ import {Subscription} from 'rxjs'
 export class FilterListComponent implements OnInit {
 
   listen: Subscription;
+  index: Number;
   children_data: any;
   filterTerm : string;
   movies$ = [];
@@ -19,7 +20,7 @@ export class FilterListComponent implements OnInit {
 
   ngOnInit(): void {
     this.children_data = "default";
-    this.apiservice.getAllMovie().subscribe(data => {
+    this.apiservice.getShowByFilter("1").subscribe(data => {
       data.shows.forEach ( result => {
         console.log(result)
         this.movies$.push(result);
@@ -29,13 +30,12 @@ export class FilterListComponent implements OnInit {
 
   selected(event: any ) : void {
     event.currentTarget.style.backgroundColor = 'green';
-    this.children_data = this.movies$[1].title;
+    this.children_data = this.movies$[1];
   }
 
-  filter_list(value : string[]): void {
+  filter_list(tmp : string[]): void {
     this.movies$ = [];
-    console.log(value);
-    this.apiservice.getShowByFilter(value).subscribe(data => {
+    this.apiservice.getShowByFilter(tmp[1]).subscribe(data => {
       data.shows.forEach ( result => {
         this.movies$.push(result);
       })

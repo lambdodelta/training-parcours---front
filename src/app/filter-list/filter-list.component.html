@@ -11,6 +11,7 @@
                 <tr>
                     <td>Titre</td>
                     <td>Langue</td>
+                    <td>Episode(s)</td>
                     <td>Status</td>
                     <td>Pays</td>
                     <td>Année</td>
@@ -20,6 +21,7 @@
                 <tr *ngFor="let show of movies$ | filter:filterTerm" (click)="selected($event)">
                     <td>{{show.title}}</td>
                     <td>{{show.language}}</td>
+                    <td>{{show.episodes}}</td>
                     <td>{{show.status}}</td>
                 </tr>
             </tbody>
