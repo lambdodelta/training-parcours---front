@@ -9,16 +9,21 @@ import { ApiService } from '../../service/api.service'
 export class EpisodeInfoComponent implements OnInit {
 
   @Input() data : any;
-  episode_data: any[];
+  episode_data$ = [];
   constructor(public apiservice: ApiService) { }
 
   ngOnInit(): void {
   }
 
   ngOnChanges(change: SimpleChanges) : void {
-    console.log(change.data.currentValue.id)
-    this.apiservice.getEpisodeByShow(change.data.currentValue.id).subscribe(data => {
-      console.log(data)
+    if ( change.data.currentValue != change.data.previousValue && change.data.currentValue !== "default")
+    {
+      this.episode_data$ = [];
+      this.apiservice.getEpisodeByShow(change.data.currentValue.id).subscribe(data => {
+        data.episodes.forEach ( result => {
+          this.episode_data$.push(result);
+        })
       })
     }
+  }
 }

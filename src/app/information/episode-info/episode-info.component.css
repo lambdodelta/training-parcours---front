@@ -1,0 +1,12 @@
+.block {
+    border-radius: 0.2em;
+    border: 1px solid gray;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1em;
+}
+.main.block {
+    border: none;
+    margin: 2em !important;
+    max-height: 100em;
+}
