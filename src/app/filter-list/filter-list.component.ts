@@ -10,10 +10,10 @@ import {Subscription} from 'rxjs'
 export class FilterListComponent implements OnInit {
 
   @Input('class')
-klass: string
+  klass: string
 
-@Input()
-ngClass: string | string[] | Set<string> | { [klass: string]: any; }
+  @Input()
+  ngClass: string | string[] | Set<string> | { [klass: string]: any; }
 
   select: any;
   listen: Subscription;
@@ -27,7 +27,7 @@ ngClass: string | string[] | Set<string> | { [klass: string]: any; }
 
   ngOnInit(): void {
     this.children_data = "default";
-    this.apiservice.getShowByFilter("1").subscribe(data => {
+    this.apiservice.getShowByFilter("default").subscribe(data => {
       data.shows.forEach ( result => {
         console.log(result)
         this.movies$.push(result);
@@ -36,13 +36,12 @@ ngClass: string | string[] | Set<string> | { [klass: string]: any; }
   }
 
   selected(event: any ) : void {
-    console.log(this.movies$[event.currentTarget.id].id)
     this.select = this.movies$[event.currentTarget.id].id
     this.children_data = this.movies$[event.currentTarget.id];
   }
 
   filter_list(tmp : string[]): void {
-    this.movies$ = [];
+    this.movies$ = []; // on prend le premier argument à défaut de pouvoir faire d'autre recherche
     this.apiservice.getShowByFilter(tmp[1]).subscribe(data => {
       data.shows.forEach ( result => {
         this.movies$.push(result);

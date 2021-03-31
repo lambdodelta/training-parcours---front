@@ -9,6 +9,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FilterListComponent } from './filter-list/filter-list.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { DetailsComponent } from './details/details.component';
+import { EpisodeInfoComponent } from './information/episode-info/episode-info.component';
+import { SummaryInfoComponent } from './information/summary-info/summary-info.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { DetailsComponent } from './details/details.component';
     AppComponent,
     FilterListComponent,
     SideBarComponent,
-    DetailsComponent
+    DetailsComponent,
+    EpisodeInfoComponent,
+    SummaryInfoComponent
   ],
   imports: [
     BrowserModule,

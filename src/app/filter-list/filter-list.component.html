@@ -21,6 +21,7 @@
                 <tr *ngFor="let show of movies$ | filter:filterTerm; index as i" id={{i}} (click)="selected($event)" [ngClass]="{select: select === show.id}">
                     <td>{{show.title}}</td>
                     <td>{{show.language}}</td>
+                    <td>{{show.episodes}}</td>
                     <td>{{show.status}}</td>
                 </tr>
             </tbody>

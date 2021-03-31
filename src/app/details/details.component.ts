@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { ApiService } from '../service/api.service'
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -10,7 +9,7 @@ export class DetailsComponent implements OnInit {
 
   @Input() data: any;
   
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }

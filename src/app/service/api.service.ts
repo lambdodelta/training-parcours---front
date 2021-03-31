@@ -25,4 +25,13 @@ export class ApiService {
     })
   }
 
+  getEpisodeByShow(value: number): Observable<any> {
+    console.log(value);
+    return this.http.get<any>('https://api.betaseries.com/shows/episodes?id=' + value , {
+      headers: {
+        'X-BetaSeries-Key' : '0c28af9c6ab6' ,
+      }
+    })
+  }
+
 }

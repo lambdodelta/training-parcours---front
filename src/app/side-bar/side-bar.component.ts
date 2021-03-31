@@ -9,13 +9,13 @@ export class SideBarComponent implements OnInit {
 
   Hero = [
     { id: 1, name: 'ordre' , nten: [
-      "date", "nom"
+      "tous", "alphabetical", "popularity"
     ] },
     { id: 2, name: 'récent', nten: [
-      "date", "nom"
+      "tous", "récent"
     ] },
     { id: 3, name: 'genre' , conten: [
-      "date", "nom"
+      "tous", "nom"
     ] }
   ];
 
