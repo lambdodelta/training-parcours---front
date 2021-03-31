@@ -11,6 +11,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { DetailsComponent } from './details/details.component';
 import { EpisodeInfoComponent } from './information/episode-info/episode-info.component';
 import { SummaryInfoComponent } from './information/summary-info/summary-info.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { SummaryInfoComponent } from './information/summary-info/summary-info.co
     SideBarComponent,
     DetailsComponent,
     EpisodeInfoComponent,
-    SummaryInfoComponent
+    SummaryInfoComponent,
+    DynamicFormComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

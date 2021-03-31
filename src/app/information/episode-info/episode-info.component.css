@@ -1,3 +1,7 @@
+h3 {
+    padding-top: 2em;
+}
+
 .block {
     border-radius: 0.2em;
     border: 1px solid gray;
@@ -8,5 +12,6 @@
 .main.block {
     border: none;
     margin: 2em !important;
+    text-align: center;
     max-height: 100em;
 }

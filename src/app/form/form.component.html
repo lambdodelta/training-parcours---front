@@ -1,0 +1,16 @@
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+      <div *ngFor="let question of questions" class="form-row">
+        <app-dynamic-form [question]="question" [form]="form"></app-dynamic-form>
+      </div>
+  
+      <div class="form-row">
+        <button type="submit" [disabled]="!form.valid">Créer Etudiant</button>
+      </div>
+    </form>
+  
+    <div *ngIf="payLoad" class="form-row">
+      <strong>Envoi à l'api</strong><br>
+    </div>
+</div>
