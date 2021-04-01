@@ -10,7 +10,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllMovie(): Observable<any> {
-    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=5' , {
+    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=20' , {
       headers: {
         'X-BetaSeries-Key' : '0c28af9c6ab6' ,
       }
@@ -18,7 +18,7 @@ export class ApiService {
   }
 
   getShowByFilter(value: string): Observable<any> {
-    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=5&order=' + value , {
+    return this.http.get<any>('https://api.betaseries.com/shows/list?limit=20&order=' + value , {
       headers: {
         'X-BetaSeries-Key' : '0c28af9c6ab6' ,
       }

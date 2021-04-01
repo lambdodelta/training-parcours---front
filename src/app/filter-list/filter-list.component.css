@@ -37,6 +37,11 @@ button {
     border-style: none;
 }
 
+.table {
+    overflow-y: scroll;
+    height: 20em;
+}
+
 .content {
     margin: 2em !important;
 }

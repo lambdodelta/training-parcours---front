@@ -13,6 +13,7 @@ import { EpisodeInfoComponent } from './information/episode-info/episode-info.co
 import { SummaryInfoComponent } from './information/summary-info/summary-info.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { FormComponent } from './form/form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormComponent } from './form/form.component';
     FormsModule,
     Ng2SearchPipeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

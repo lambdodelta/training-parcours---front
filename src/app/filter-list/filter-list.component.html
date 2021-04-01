@@ -6,6 +6,7 @@
             <button class="btn btn-danger">Exporter Sélection</button>
             <button class="btn btn-danger">Exporter Tout</button>
         </div>
+        <div class="table">
         <table>
             <thead>
                 <tr>
@@ -13,8 +14,6 @@
                     <td>Langue</td>
                     <td>Episode(s)</td>
                     <td>Status</td>
-                    <td>Pays</td>
-                    <td>Année</td>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +25,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
         <div *ngIf="movies$"><p>nombre total de films : {{ movies$.length }}</p></div>
     </div>
     <app-details [data]="children_data"></app-details>
