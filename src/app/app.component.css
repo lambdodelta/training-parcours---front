@@ -261,6 +261,7 @@
   ul {
       list-style: none;
       display: inline-flex;
+      margin-left: -1em;
   }
 
   ul > li:nth-child(2) {
@@ -270,7 +271,7 @@
 
   ul > li:nth-child(1) {
     position: relative;
-    padding-right: 2em;
+    padding-right: 4em;
 }
 
   .dashboard {

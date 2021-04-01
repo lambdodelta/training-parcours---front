@@ -56,6 +56,12 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "es": {
+              "localize": ["es"]
             }
           }
         },
@@ -67,6 +73,12 @@
           "configurations": {
             "production": {
               "browserTarget": "front:build:production"
+            },
+            "fr": {
+              "browserTarget": "front:build:fr"
+            },
+            "es": {
+              "browserTarget": "front:build:es"
             }
           }
         },
@@ -74,6 +86,12 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "front:build"
+          },
+          "i18n": {
+            "locales": {
+              "fr": "src/locale/messages.fr.xlf",
+              "es": "src/locale/messages.es.xlf"
+            }
           }
         },
         "test": {

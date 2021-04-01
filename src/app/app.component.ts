@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { QuestionService } from './service/question.service';
-import { QuestionBase } from './form-data/question-base';
+import { QuestionBase } from './generic-form/form-data/question-base';
 import { Observable } from 'rxjs';
 
 @Component({

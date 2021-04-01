@@ -6,11 +6,11 @@
       </div>
   
       <div class="form-row">
-        <button class="btn btn-danger" type="submit" [disabled]="!form.valid">Créer Etudiant</button>
+        <button class="btn btn-danger" type="submit" [disabled]="!form.valid">Create Show</button>
       </div>
     </form>
   
     <div *ngIf="payLoad" class="form-row">
-      <strong>Envoi à l'api</strong><br>
+      <strong>Envoi à l'api de {{payLoad}} </strong><br>
     </div>
 </div>

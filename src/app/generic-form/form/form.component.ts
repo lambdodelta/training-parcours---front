@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { QuestionBase } from '../form-data/question-base';
-import { QuestionControlService } from '../service/question-control.service';
+import { QuestionControlService } from '../../service/question-control.service';
 
 @Component({
   selector: 'app-form',
@@ -22,6 +22,6 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.payLoad = JSON.stringify(this.form.getRawValue());
+    this.payLoad = JSON.stringify(this.form.getRawValue());
   }
 }
