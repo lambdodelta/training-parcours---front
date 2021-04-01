@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter,  Output } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  Hero = [
+  filter = [
     { id: 1, name: 'ordre' , nten: [
       "tous", "alphabetical", "popularity"
     ] },
@@ -25,7 +25,7 @@ export class SideBarComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    for(var i = 0; i < this.Hero.length; i++) {
+    for(var i = 0; i < this.filter.length; i++) {
       this.filter_term.push("");
     }
   }

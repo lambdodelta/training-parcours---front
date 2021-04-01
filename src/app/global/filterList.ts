@@ -1,4 +1,4 @@
-export class filterList {
+export class FilterList {
     public static = [
         { id: 1, name: 'ordre' , nten: [
           "tous", "alphabetical", "popularity"
