@@ -258,6 +258,21 @@
     margin-right: 4px;
   }
 
+  ul {
+      list-style: none;
+      display: inline-flex;
+  }
+
+  ul > li:nth-child(2) {
+      position: relative;
+      top: 1.6rem;
+  }
+
+  ul > li:nth-child(1) {
+    position: relative;
+    padding-right: 2em;
+}
+
   .dashboard {
     display: flex;
   }

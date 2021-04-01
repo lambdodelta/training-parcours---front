@@ -22,6 +22,6 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.payLoad = JSON.stringify(this.form.getRawValue());
+    // this.payLoad = JSON.stringify(this.form.getRawValue());
   }
 }

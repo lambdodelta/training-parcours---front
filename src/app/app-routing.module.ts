@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FilterListComponent } from './filter-list/filter-list.component';
-import { FormComponent } from './form/form.component';
+import { LayoutFormComponent } from './layout-form/layout-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: FilterListComponent },
-  { path: 'create', component: FormComponent }
+  { path: 'create', component: LayoutFormComponent }
 ];
 
 @NgModule({

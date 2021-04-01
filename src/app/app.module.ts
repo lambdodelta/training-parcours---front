@@ -14,6 +14,7 @@ import { SummaryInfoComponent } from './information/summary-info/summary-info.co
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { FormComponent } from './form/form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LayoutFormComponent } from './layout-form/layout-form.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     EpisodeInfoComponent,
     SummaryInfoComponent,
     DynamicFormComponent,
-    FormComponent
+    FormComponent,
+    LayoutFormComponent
   ],
   imports: [
     BrowserModule,

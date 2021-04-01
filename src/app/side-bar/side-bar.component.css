@@ -13,3 +13,14 @@ h3 {
 .content {
     margin: 1em !important;
 }
+
+a {
+    color: white;
+}
+
+button {
+    margin-top: 2em;
+    background-color: gray !important;
+    border-style: none;
+    color: ivory;
+}
