@@ -1,4 +1,35 @@
 <div class="main">
     <h3>Formulaire d'inscription</h3>
-    <app-form [questions]="questions$ | async"></app-form>
+    <mat-horizontal-stepper>
+
+        <!--color
+date
+datetime-local
+email
+month
+number
+password
+search
+tel
+text
+time
+url
+week -->
+
+        <mat-step label="Step 1">
+            <app-form [questions]="questions$ | async"></app-form>
+            <mat-form-field appearance="fill">
+                <mat-label>Amount</mat-label>
+                <input matInput type="date" class="example-right-align">
+              </mat-form-field>
+        </mat-step>
+      
+        <mat-step label="Step 2">
+            <app-form [questions]="questions$ | async"></app-form>
+        </mat-step>
+      
+        <mat-step label="Step 3">
+          You are now done.
+        </mat-step>
+      </mat-horizontal-stepper>
 </div>

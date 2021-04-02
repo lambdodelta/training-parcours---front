@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
@@ -86,12 +87,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "front:build"
-          },
-          "i18n": {
-            "locales": {
-              "fr": "src/locale/messages.fr.xlf",
-              "es": "src/locale/messages.es.xlf"
-            }
           }
         },
         "test": {
@@ -106,6 +101,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -134,10 +130,15 @@
             "production": {
               "devServerTarget": "front:serve:production"
             }
+          },
+          "i18n": {
+          "locales": {
+            "fr": "src/locale/messages.fr.xlf",
+            "es": "src/locale/messages.es.xlf"
           }
         }
       }
-    }
+    }}
   },
   "defaultProject": "front"
 }

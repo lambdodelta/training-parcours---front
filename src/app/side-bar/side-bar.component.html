@@ -1,9 +1,9 @@
 <div class="background">
     <div class="content">
         <h3>Filtre(s)</h3>
-        <div *ngFor="let filt of filter" class="form-row align-items-center">
+        <div *ngFor="let hero of Hero" class="form-row align-items-center">
             <div class="col-auto my-1">
-              <label class="mr-sm-2" for="inlineFormCustomSelect">{{ filt.name }}</label>
+              <label class="mr-sm-2" for="inlineFormCustomSelect">{{ hero.name }}</label>
               <select (change)="changing($event.target)" class="custom-select mr-sm-2" id={{hero.id}}>
                 <option selected>Tous</option>
                 <option value="popularity">Popularité</option>
