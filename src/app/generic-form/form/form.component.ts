@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { QuestionBase } from '../form-data/question-base';
 import { QuestionControlService } from '../../service/question-control.service';
 
@@ -12,16 +12,22 @@ import { QuestionControlService } from '../../service/question-control.service';
 export class FormComponent implements OnInit {
 
   @Input() questions: QuestionBase<string>[] = [];
-  form: FormGroup;
+  @Input() form: FormGroup;
+  newform = new FormGroup({});
   payLoad = '';
 
   constructor(private qcs: QuestionControlService) {  }
 
-  ngOnInit() {
-    this.form = this.qcs.toFormGroup(this.questions);
-  }
+  ngOnInit() {}
 
   onSubmit() {
-    this.payLoad = JSON.stringify(this.form.getRawValue());
+    console.log(this.newform);
+  }
+
+  OnCreate(): void
+  {
+    this.questions.forEach(question => {
+      this.newform.addControl(question.key, new FormControl('', Validators.required));
+    })
   }
 }

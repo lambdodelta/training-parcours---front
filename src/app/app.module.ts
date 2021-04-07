@@ -17,7 +17,6 @@ import { DynamicFormComponent } from './generic-form/dynamic-form/dynamic-form.c
 import { FormComponent } from './generic-form/form/form.component';
 import { LayoutFormComponent } from './generic-form/layout-form/layout-form.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouteConfigLoadEnd } from '@angular/router';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

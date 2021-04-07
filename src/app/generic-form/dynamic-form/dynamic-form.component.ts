@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { QuestionBase } from '../form-data/question-base';
 
 @Component({
@@ -11,13 +11,15 @@ export class DynamicFormComponent implements OnInit {
 
   @Input() question: QuestionBase<string>;
   @Input() form: FormGroup;
+  newform = new FormGroup({});
+
   get isValid() { return this.form.controls[this.question.key].valid; }
   
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
   
 
 }

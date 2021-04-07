@@ -34,4 +34,8 @@ export class ApiService {
     })
   }
 
+  getJSON(): Observable<any> {
+    return this.http.get("./assets/jsoncuricul.json");
+  }
+
 }

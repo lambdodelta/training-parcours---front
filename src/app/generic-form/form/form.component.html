@@ -1,16 +1,13 @@
 <div>
-    <form (ngSubmit)="onSubmit()" [formGroup]="form">
-  
-      <div *ngFor="let question of questions" class="form-row">
-        <app-dynamic-form [question]="question" [form]="form"></app-dynamic-form>
-      </div>
-  
-      <div class="form-row">
-        <button class="btn btn-danger" type="submit" [disabled]="!form.valid">Create Show</button>
-      </div>
-    </form>
-  
-    <div *ngIf="payLoad" class="form-row">
-      <strong>Envoi à l'api de {{payLoad}} </strong><br>
+  <button (click)="OnCreate()">updateform</button>
+  <form [formGroup]="newform" (ngSubmit)="onSubmit()">
+    <div *ngFor="let question of questions" class="form-row">
+      <mat-form-field class="example-full-width">
+        <mat-label>{{question.label}}</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..." [formControlName]="question.key" [id]="question.key" required [type]="question.type"></textarea>
+      </mat-form-field>
+      <label>{{ newform.get('Firstname').value }}</label>
     </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
