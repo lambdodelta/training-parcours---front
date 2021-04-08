@@ -13,8 +13,6 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { DetailsComponent } from './details/details.component';
 import { EpisodeInfoComponent } from './information/episode-info/episode-info.component';
 import { SummaryInfoComponent } from './information/summary-info/summary-info.component';
-import { DynamicFormComponent } from './generic-form/dynamic-form/dynamic-form.component';
-import { FormComponent } from './generic-form/form/form.component';
 import { LayoutFormComponent } from './generic-form/layout-form/layout-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -29,9 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DetailsComponent,
     EpisodeInfoComponent,
     SummaryInfoComponent,
-    DynamicFormComponent,
-    LayoutFormComponent,
-    FormComponent
+    LayoutFormComponent
   ],
   imports: [
     BrowserModule,

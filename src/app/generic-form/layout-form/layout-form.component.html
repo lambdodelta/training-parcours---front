@@ -1,34 +1,37 @@
 <section>
   <mat-horizontal-stepper>
   <div *ngFor="let control of dynamicFormArray">
-    <mat-step [stepControl]="lambdaFormGroup" label="Fill out your address">
+    <mat-step [stepControl]="lambdaFormGroup" label="{{ control.name }}">
       <div class="col-md-12">{{ myFormGroup.value | json }}</div>
       <div><p>{{errorMessage$}}</p></div>
         <form [formGroup]="myFormGroup">
-          <div *ngFor="let field of control">
-            <div [ngSwitch]="field.Type">
+          <div *ngFor="let field of control.fields">
+            <div [ngSwitch]="field.type">
               <div *ngSwitchCase="'input'">
-                <label>{{ field.Label }}</label>
-                <input type="text" [formControlName]="field.ID" class="form-control">
+                <label>{{ field.name }}</label>
+                <input type="text" [formControlName]="field.name" class="form-control">
               </div>
               <div *ngSwitchCase="'select'">
-              <label>{{ field.Label }}</label>
-              <select class="form-control">
-                <option value="-1">Select</option>
-                <option *ngFor="let val of field.Value.split(',')"> {{ val }}</option>
-              </select>
+                <label>{{ field.name }}</label>
+                <select class="form-control">
+                  <option value="-1">Select</option>
+                  <option *ngFor="let val of field.Data"> 
+                    {{ val }}
+                  </option>
+                </select>
               </div>
             </div>
           </div>
+          <div>
+            <br>
+            <button class="btn btn-primary" mat-button matStepperPrevious>Previous</button>
+            <button class="btn btn-primary" mat-button matStepperNext>Next</button>
+          </div>
         </form>
-      <div>
-        <br>
-        <button class="btn btn-primary" mat-button matStepperNext>Next</button>
-      </div>
     </mat-step>
   </div>
 </mat-horizontal-stepper>
-<form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
+<form class="center" [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
   <button class="btn btn-primary" type="submit" [disabled]="myFormGroup.invalid">Submit</button>
 </form>
 </section>

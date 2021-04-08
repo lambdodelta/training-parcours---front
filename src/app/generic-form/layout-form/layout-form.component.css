@@ -9,3 +9,7 @@
   .mat-form-field {
     margin-top: 16px;
   }
+
+form.center {
+  text-align: center;
+}

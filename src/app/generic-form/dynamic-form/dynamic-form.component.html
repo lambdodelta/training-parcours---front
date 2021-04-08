@@ -1,7 +1,0 @@
-<div [formGroup]="form">
-    <div [ngSwitch]="question.controlType">
-      <label [attr.for]="question.key">{{question.label}}</label>
-      <input  class="form-control" *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key" required [type]="question.type">
-      <label>{{ form.get('Firstname').value }}</label>
-    </div>
-</div>

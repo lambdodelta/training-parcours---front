@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,6 +15,30 @@ export class ApiService {
         'X-BetaSeries-Key' : '0c28af9c6ab6' ,
       }
     })
+  }
+
+  getToken(): Observable<any> {
+    const user = {
+      "username" : "fictional student",
+      "password": "yyp@BGuj"
+    }
+    const httpOptions = {
+      headers: new HttpHeaders({
+          'Content-Type':  'application/json',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZpY3Rpb25hbCBzdHVkZW50IiwibWFpbCI6ImZpY3Rpb25hbC5zdHVkZW50QGVwaXRlY2guZXUiLCJpYXQiOjE2MTc4MDUwMjMsImV4cCI6MTYxNzgxMjIyM30.byOWelINvTOWii1zhYdN_1GcV-RjK66BJfSuTa4NsLs'
+      })
+    };
+    return this.http.post<any>("http://localhost:3000/api/authenticateScript" , user, httpOptions );
+  }
+
+  createCurriculum(objet: any, token: any): Observable<any> { // json
+    const httpOptions = {
+      headers: new HttpHeaders({
+          'Content-Type':  'application/json',
+          'Authorization': `Bearer ${token}`
+      })
+    };
+    return this.http.post<any>("http://localhost:3000/api/curriculums" , objet, httpOptions );
   }
 
   getShowByFilter(value: string): Observable<any> {

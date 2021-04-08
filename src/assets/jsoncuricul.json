@@ -40,6 +40,7 @@
                },
                "order":0,
                "name":"Firstname",
+               "required": true,
                "type":"input"
             },
             {
@@ -52,19 +53,6 @@
                   "time":1617281760
                },
                "order":1,
-               "name":"Lastname",
-               "type":"input"
-            },
-            {
-               "data":[
-                  
-               ],
-               "_id":{
-                  "machine":-548243907,
-                  "inc":379683191,
-                  "time":1617281760
-               },
-               "order":2,
                "name":"Lastname",
                "type":"input"
             },
@@ -193,7 +181,7 @@
                   "time":1617281760
                },
                "order":1,
-               "name":"Lastname",
+               "name":"Personal address",
                "type":"input"
             },
             {
@@ -206,7 +194,7 @@
                   "time":1617281760
                },
                "order":2,
-               "name":"Lastname",
+               "name":"Phone",
                "type":"input"
             },
             {
@@ -220,32 +208,6 @@
                },
                "order":3,
                "name":"Street",
-               "type":"input"
-            },
-            {
-               "data":[
-                  
-               ],
-               "_id":{
-                  "machine":-548243907,
-                  "inc":379683204,
-                  "time":1617281760
-               },
-               "order":4,
-               "name":"City",
-               "type":"input"
-            },
-            {
-               "data":[
-                  
-               ],
-               "_id":{
-                  "machine":-548243907,
-                  "inc":379683205,
-                  "time":1617281760
-               },
-               "order":5,
-               "name":"Zipcode",
                "type":"input"
             },
             {
